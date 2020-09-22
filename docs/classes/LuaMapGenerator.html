@@ -1,0 +1,1078 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LuaMapGenerator classmod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    <ul class="uk-nav nav nav-module-contents">
+    <li class="nav-item">
+    <h4 class="uk-panel-title">Contents of <strong>LuaMapGenerator</strong></h4>
+    <ul class="nav">
+    <li class="nav-item"><a href="#Methods"><span class="fragment-hashtag">#</span> Methods</a></li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="up-to-top">
+    <a href="#">Top <i class="icon icon-upward"></i></a>
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>LuaMapGenerator</em></strong></span> classmod</h2>
+    <p>A class used in map generation.</p>
+    <p>
+
+</p>
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Methods">Methods</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:stood_world_map_tile">LuaMapGenerator:stood_world_map_tile ()</a></td>
+    <td class="summary">Gets the world map tile the player was standing on when they entered the map
+  being generated.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:is_first_generation">LuaMapGenerator:is_first_generation ()</a></td>
+    <td class="summary">Returns true if the map is being generated for the first time, across all
+  regenerations.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:is_deepest_level">LuaMapGenerator:is_deepest_level ()</a></td>
+    <td class="summary">Returns true if the current dungeon level is the deepest in this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:create">LuaMapGenerator:create (width, height)</a></td>
+    <td class="summary">Creates a blank map of the specified size.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:load_custom">LuaMapGenerator:load_custom (map_name)</a></td>
+    <td class="summary">Loads a custom map with the given name.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:generate_nefia">LuaMapGenerator:generate_nefia ()</a></td>
+    <td class="summary">Generates a random nefia (dungeon).</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_name">LuaMapGenerator:set_name (name)</a></td>
+    <td class="summary">Sets the created map's name.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_tileset">LuaMapGenerator:set_tileset (tileset_id)</a></td>
+    <td class="summary">Initializes the created map's tileset.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_stair_up_pos">LuaMapGenerator:set_stair_up_pos (x, y)</a></td>
+    <td class="summary">Sets the position of the stairs up in the created map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_stair_down_pos">LuaMapGenerator:set_stair_down_pos (x, y)</a></td>
+    <td class="summary">Sets the position of the stairs down in the created map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_entrance_type">LuaMapGenerator:set_entrance_type (type)</a></td>
+    <td class="summary">Sets the created map's entrance type.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:set_no_aggro_refresh">LuaMapGenerator:set_no_aggro_refresh (flag)</a></td>
+    <td class="summary">Sets the created map's no aggro refresh flag.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:place_player">LuaMapGenerator:place_player ()</a></td>
+    <td class="summary">Sets the position of the player based on the entrance type.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:place_player_xy">LuaMapGenerator:place_player_xy (x, y)</a></td>
+    <td class="summary">Sets the position of the player to the given coordinates and
+  updates the entrance type accordingly.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:update_quests_in_map">LuaMapGenerator:update_quests_in_map ()</a></td>
+    <td class="summary">Creates new quests for the characters in the created map if necessary.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:mark_quest_targets">LuaMapGenerator:mark_quest_targets ()</a></td>
+    <td class="summary">Marks all characters in this map as being enemies and quest targets.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapGenerator:initialize_world_map">LuaMapGenerator:initialize_world_map ()</a></td>
+    <td class="summary">Initializes this map as a world map,</td>
+    </tr>
+    </tbody>
+    </table>
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+    <h3><span id="Methods" class="section-title"><a href="#Methods">Methods</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:stood_world_map_tile" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:stood_world_map_tile">LuaMapGenerator:stood_world_map_tile ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Gets the world map tile the player was standing on when they entered the map
+  being generated.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">num</span></span>)
+    <span class="return-text">the tile ID</span>
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:is_first_generation" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:is_first_generation">LuaMapGenerator:is_first_generation ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Returns true if the map is being generated for the first time, across all
+  regenerations.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">bool</span></span>)
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:is_deepest_level" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:is_deepest_level">LuaMapGenerator:is_deepest_level ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Returns true if the current dungeon level is the deepest in this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">bool</span></span>)
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:create" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:create">LuaMapGenerator:create (width, height)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Creates a blank map of the specified size.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>width</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>height</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:load_custom" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:load_custom">LuaMapGenerator:load_custom (map_name)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Loads a custom map with the given name.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>map_name</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:generate_nefia" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:generate_nefia">LuaMapGenerator:generate_nefia ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Generates a random nefia (dungeon).</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_name" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_name">LuaMapGenerator:set_name (name)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the created map's name.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>name</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_tileset" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_tileset">LuaMapGenerator:set_tileset (tileset_id)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Initializes the created map's tileset.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>tileset_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_stair_up_pos" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_stair_up_pos">LuaMapGenerator:set_stair_up_pos (x, y)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the position of the stairs up in the created map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>x</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>y</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_stair_down_pos" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_stair_down_pos">LuaMapGenerator:set_stair_down_pos (x, y)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the position of the stairs down in the created map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>x</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>y</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_entrance_type" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_entrance_type">LuaMapGenerator:set_entrance_type (type)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the created map's entrance type.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>type</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">Enums.EntranceType</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:set_no_aggro_refresh" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:set_no_aggro_refresh">LuaMapGenerator:set_no_aggro_refresh (flag)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the created map's no aggro refresh flag.</p>
+    <p class="section-item-description"> If true, characters
+  will not have their enemy<em>id and hate reset after map
+  initialization. Set this flag to true if you change the "enemy</em>id"
+  or "hate" fields of any characters in the generation function.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>flag</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:place_player" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:place_player">LuaMapGenerator:place_player ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the position of the player based on the entrance type.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:place_player_xy" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:place_player_xy">LuaMapGenerator:place_player_xy (x, y)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the position of the player to the given coordinates and
+  updates the entrance type accordingly.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>x</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>y</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:update_quests_in_map" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:update_quests_in_map">LuaMapGenerator:update_quests_in_map ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Creates new quests for the characters in the created map if necessary.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:mark_quest_targets" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:mark_quest_targets">LuaMapGenerator:mark_quest_targets ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Marks all characters in this map as being enemies and quest targets.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapGenerator:initialize_world_map" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapGenerator:initialize_world_map">LuaMapGenerator:initialize_world_map ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Initializes this map as a world map,</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

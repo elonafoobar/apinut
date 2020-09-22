@@ -1,0 +1,2346 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LuaItem classmod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    <ul class="uk-nav nav nav-module-contents">
+    <li class="nav-item">
+    <h4 class="uk-panel-title">Contents of <strong>LuaItem</strong></h4>
+    <ul class="nav">
+    <li class="nav-item"><a href="#Fields"><span class="fragment-hashtag">#</span> Fields</a></li>
+    <li class="nav-item"><a href="#Methods"><span class="fragment-hashtag">#</span> Methods</a></li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="up-to-top">
+    <a href="#">Top <i class="icon icon-upward"></i></a>
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>LuaItem</em></strong></span> classmod</h2>
+    <p>Represents an item.</p>
+    <p>
+
+</p>
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Fields">Fields</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaItem.integer_id">LuaItem.integer_id</a></td>
+    <td class="summary">[R] The integer ID of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.position">LuaItem.position</a></td>
+    <td class="summary">[RW] The item's position.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.charges">LuaItem.charges</a></td>
+    <td class="summary">[RW] The number of charges this item holds (for rods, bait, etc.)</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.subname">LuaItem.subname</a></td>
+    <td class="summary">[RW] The subname of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.image">LuaItem.image</a></td>
+    <td class="summary">[RW] The image ID of the item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.value">LuaItem.value</a></td>
+    <td class="summary">[RW] The value of the item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.param1">LuaItem.param1</a></td>
+    <td class="summary">[RW] A generic parameter.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.param2">LuaItem.param2</a></td>
+    <td class="summary">[RW] A generic parameter.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.param3">LuaItem.param3</a></td>
+    <td class="summary">[RW] A generic parameter.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.param4">LuaItem.param4</a></td>
+    <td class="summary">[RW] A generic parameter.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.own_state">LuaItem.own_state</a></td>
+    <td class="summary">[RW] Controls the ownership of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.material">LuaItem.material</a></td>
+    <td class="summary">[RW] The material ID of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.id">LuaItem.id</a></td>
+    <td class="summary">[R] The new-style prototype ID of the item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.name">LuaItem.name</a></td>
+    <td class="summary">[R] The name of the item with article and number.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.basename">LuaItem.basename</a></td>
+    <td class="summary">[R] The name of the item without article and number.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.number">LuaItem.number</a></td>
+    <td class="summary">[RW] The number of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.curse_state">LuaItem.curse_state</a></td>
+    <td class="summary">[RW] The curse state of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.identify_state">LuaItem.identify_state</a></td>
+    <td class="summary">[RW] The identify state of this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.color">LuaItem.color</a></td>
+    <td class="summary">[RW] The color ID of the item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_acidproof">LuaItem.is_acidproof</a></td>
+    <td class="summary">[RW] The flag if the item is acidproof.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_fireproof">LuaItem.is_fireproof</a></td>
+    <td class="summary">[RW] The flag if the item is fireproof.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_coldproof">LuaItem.is_coldproof</a></td>
+    <td class="summary">[RW] The flag if the item is coldproof.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_precious">LuaItem.is_precious</a></td>
+    <td class="summary">[RW] The flag if the item is precious.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.has_charges">LuaItem.has_charges</a></td>
+    <td class="summary">[RW] The flag if the item has charge.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.has_cooldown_time">LuaItem.has_cooldown_time</a></td>
+    <td class="summary">[RW] The flag if the item has cooldown time.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_aphrodisiac">LuaItem.is_aphrodisiac</a></td>
+    <td class="summary">[RW] The flag if the item is aphrodisiac.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_poisoned">LuaItem.is_poisoned</a></td>
+    <td class="summary">[RW] The flag if the item is poisoned.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_blessed_by_ehekatl">LuaItem.is_blessed_by_ehekatl</a></td>
+    <td class="summary">[RW] The flag if the item is blessed by Ehekatl.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_stolen">LuaItem.is_stolen</a></td>
+    <td class="summary">[RW] The flag if the item is stolen.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_quest_target">LuaItem.is_quest_target</a></td>
+    <td class="summary">[RW] The flag if the item is quest target.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_no_drop">LuaItem.is_no_drop</a></td>
+    <td class="summary">[RW] The flag if the item is marked as no-drop.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_alive">LuaItem.is_alive</a></td>
+    <td class="summary">[RW] The flag if the item is alive.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_eternal_force">LuaItem.is_eternal_force</a></td>
+    <td class="summary">[RW] The flag if the item is eternal force.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_handmade">LuaItem.is_handmade</a></td>
+    <td class="summary">[RW] The flag if the item is handmade.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.is_showroom_only">LuaItem.is_showroom_only</a></td>
+    <td class="summary">[RW] The flag if the item is showroom only.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem.prototype">LuaItem.prototype</a></td>
+    <td class="summary">[R] The prototype data of the character.</td>
+    </tr>
+    </tbody>
+    </table>
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Methods">Methods</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaItem:remove">LuaItem:remove ()</a></td>
+    <td class="summary">Removes this item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaItem:change_material">LuaItem:change_material (material_id)</a></td>
+    <td class="summary">Changes the material of this item.</td>
+    </tr>
+    </tbody>
+    </table>
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+    <h3><span id="Fields" class="section-title"><a href="#Fields">Fields</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.integer_id" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.integer_id">LuaItem.integer_id</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The integer ID of this item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>integer_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.position" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.position">LuaItem.position</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The item's position.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>position</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.charges" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.charges">LuaItem.charges</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The number of charges this item holds (for rods, bait, etc.)</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>charges</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.subname" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.subname">LuaItem.subname</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The subname of this item.</p>
+    <p class="section-item-description"> Controls the character index of
+  corpses, etc.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>subname</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.image" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.image">LuaItem.image</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The image ID of the item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>image</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.value" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.value">LuaItem.value</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The value of the item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>value</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.param1" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.param1">LuaItem.param1</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] A generic parameter.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>param1</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.param2" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.param2">LuaItem.param2</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] A generic parameter.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>param2</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.param3" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.param3">LuaItem.param3</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] A generic parameter.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>param3</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.param4" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.param4">LuaItem.param4</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] A generic parameter.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>param4</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.own_state" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.own_state">LuaItem.own_state</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] Controls the ownership of this item.</p>
+    <p class="section-item-description">  <code>-2</code>: Item was dropped by the player on death
+  <code>0</code>: Normal, can be picked up by the player
+  <code>1</code>: Not owned ("It's not your property", etc.)
+  <code>2</code>: Not carryable (shopkeeper's trunk).
+  <code>3</code>: Built shelter
+  <code>4</code>: Harvestable item in harvest quests</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>own_state</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.material" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.material">LuaItem.material</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The material ID of this item.</p>
+    <p class="section-item-description"> To change it, use
+  LuaItem.change_material.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>material</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.id" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.id">LuaItem.id</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The new-style prototype ID of the item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.name" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.name">LuaItem.name</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The name of the item with article and number.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>name</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.basename" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.basename">LuaItem.basename</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The name of the item without article and number.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>basename</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.number" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.number">LuaItem.number</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The number of this item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>number</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.curse_state" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.curse_state">LuaItem.curse_state</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The curse state of this item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>curse_state</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">CurseState</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.identify_state" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.identify_state">LuaItem.identify_state</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The identify state of this item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>identify_state</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">IdentifyState</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.color" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.color">LuaItem.color</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The color ID of the item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>color</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">ColorIndex</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_acidproof" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_acidproof">LuaItem.is_acidproof</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is acidproof.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_acidproof</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_fireproof" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_fireproof">LuaItem.is_fireproof</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is fireproof.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_fireproof</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_coldproof" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_coldproof">LuaItem.is_coldproof</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is coldproof.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_coldproof</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_precious" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_precious">LuaItem.is_precious</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is precious.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_precious</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.has_charges" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.has_charges">LuaItem.has_charges</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item has charge.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>has_charges</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.has_cooldown_time" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.has_cooldown_time">LuaItem.has_cooldown_time</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item has cooldown time.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>has_cooldown_time</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_aphrodisiac" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_aphrodisiac">LuaItem.is_aphrodisiac</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is aphrodisiac.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_aphrodisiac</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_poisoned" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_poisoned">LuaItem.is_poisoned</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is poisoned.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_poisoned</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_blessed_by_ehekatl" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_blessed_by_ehekatl">LuaItem.is_blessed_by_ehekatl</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is blessed by Ehekatl.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_blessed_by_ehekatl</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_stolen" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_stolen">LuaItem.is_stolen</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is stolen.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_stolen</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_quest_target" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_quest_target">LuaItem.is_quest_target</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is quest target.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_quest_target</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_no_drop" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_no_drop">LuaItem.is_no_drop</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is marked as no-drop.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_no_drop</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_alive" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_alive">LuaItem.is_alive</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is alive.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_alive</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_eternal_force" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_eternal_force">LuaItem.is_eternal_force</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is eternal force.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_eternal_force</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_handmade" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_handmade">LuaItem.is_handmade</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is handmade.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_handmade</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.is_showroom_only" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.is_showroom_only">LuaItem.is_showroom_only</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The flag if the item is showroom only.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_showroom_only</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">boolean</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem.prototype" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem.prototype">LuaItem.prototype</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The prototype data of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>prototype</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="https://www.lua.org/pil/2.5.html">table</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+    <h3><span id="Methods" class="section-title"><a href="#Methods">Methods</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem:remove" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem:remove">LuaItem:remove ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Removes this item.</p>
+    <p class="section-item-description"> The item reference will no longer be valid for use.</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaItem:change_material" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaItem:change_material">LuaItem:change_material (material_id)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Changes the material of this item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>material_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     ID of the item material
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

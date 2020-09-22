@@ -1,0 +1,4972 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Enums module</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    <ul class="uk-nav nav nav-module-contents">
+    <li class="nav-item">
+    <h4 class="uk-panel-title">Contents of <strong>Enums</strong></h4>
+    <ul class="nav">
+    <li class="nav-item"><a href="#Enums"><span class="fragment-hashtag">#</span> Enums</a></li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="up-to-top">
+    <a href="#">Top <i class="icon icon-upward"></i></a>
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>Enums</em></strong></span> module</h2>
+    <p>Enumerations for various data types.</p>
+    <p> All enum variants take the
+  name of the variant as a string for its value. This means that
+  anywhere an enum value is required, you can pass a string with its
+  name.</p>
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <h3>Usage</h3>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> Enums = ELONA.<span class="global">require</span>(<span class="string">"core.Enums"</span>)</code></pre>
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Enums">Enums</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#DamageSource">DamageSource</a></td>
+    <td class="summary">A source of damage to be used with <code>LuaCharacter.damage_hp</code>.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Color">Color</a></td>
+    <td class="summary">A set of colors.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#CurseState">CurseState</a></td>
+    <td class="summary">The curse state of an item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#IdentifyState">IdentifyState</a></td>
+    <td class="summary">The identify state of an item.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#StatusAilment">StatusAilment</a></td>
+    <td class="summary">A status effect applicable to a character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Element">Element</a></td>
+    <td class="summary">A type of elemental damage.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#TileKind">TileKind</a></td>
+    <td class="summary">A kind of tile to be used with <code>Map.generate_tile</code>.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Quality">Quality</a></td>
+    <td class="summary">The quality of randomly generated equipment.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Buff">Buff</a></td>
+    <td class="summary">The type of a buff.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#MapType">MapType</a></td>
+    <td class="summary">The type of a map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#MapEntranceType">MapEntranceType</a></td>
+    <td class="summary">Determines how the player should be spawned in a map when entering it for the
+  first time.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#MapTileset">MapTileset</a></td>
+    <td class="summary">Indicates which map tile atlas to use for a map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Gender">Gender</a></td>
+    <td class="summary">Possible genders of a character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#Relationship">Relationship</a></td>
+    <td class="summary">Relationship of a character to the player.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#CharaFlag">CharaFlag</a></td>
+    <td class="summary">A flag that can be set on a character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#TraitType">TraitType</a></td>
+    <td class="summary">The types of traits available.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#CharaFindLocation">CharaFindLocation</a></td>
+    <td class="summary">Location to search for characters using Chara.find.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#ItemFindLocation">ItemFindLocation</a></td>
+    <td class="summary">Location to search for items using Item.find.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#ControlAllyOperation">ControlAllyOperation</a></td>
+    <td class="summary">Operation to use with Input.choose_ally.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#RandomTitleType">RandomTitleType</a></td>
+    <td class="summary">Title type to use with World.random_title.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#WishMatchType">WishMatchType</a></td>
+    <td class="summary">Match type to use with Wish.match.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#WishHook">WishHook</a></td>
+    <td class="summary">Wish hook point to use with Wish.add.</td>
+    </tr>
+    </tbody>
+    </table>
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+    <h3><span id="Enums" class="section-title"><a href="#Enums">Enums</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#DamageSource" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="DamageSource">DamageSource</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A source of damage to be used with <code>LuaCharacter.damage_hp</code>.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>trap</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>overcasting</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>starvation</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>poisoning</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>curse</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>backpack_weight</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>fall_from_stairs</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>audience</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>burn</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>adventuring</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>unseen_hand</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>food_poisoning</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>blood_loss</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ether_disease</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>acid</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>shatter</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>atomic_bomb</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>iron_maiden</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>guillotine</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>hanging</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>mochi</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Color" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Color">Color</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A set of colors.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>none</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>white</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>green</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>red</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>blue</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>orange</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>yellow</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>grey</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>purple</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cyan</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_red</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>gold</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>white2</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_brown</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dark_green</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_grey</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>pale_red</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_blue</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_purple</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>light_green</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>yellow_green</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>random_furniture</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>random_seeded</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>random_any</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Color">Enums.Color</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#CurseState" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="CurseState">CurseState</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The curse state of an item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>doomed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CurseState">Enums.CurseState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cursed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CurseState">Enums.CurseState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>none</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CurseState">Enums.CurseState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>blessed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CurseState">Enums.CurseState</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> item = Item.create(<span class="number">10</span>, <span class="number">10</span>, <span class="string">"core.putitoro"</span>, <span class="number">3</span>)
+  item.curse_state = <span class="string">"Blessed"</span></code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#IdentifyState" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="IdentifyState">IdentifyState</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The identify state of an item.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>unidentified</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#IdentifyState">Enums.IdentifyState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>partly</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#IdentifyState">Enums.IdentifyState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>almost</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#IdentifyState">Enums.IdentifyState</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>completely</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#IdentifyState">Enums.IdentifyState</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> item = Item.create(<span class="number">10</span>, <span class="number">10</span>, <span class="string">"core.putitoro"</span>, <span class="number">3</span>)
+  item.identify_state = <span class="string">"Completely"</span></code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#StatusAilment" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="StatusAilment">StatusAilment</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A status effect applicable to a character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>blinded</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>confused</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>paralyzed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>poisoned</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>sleep</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>fear</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dimmed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>bleeding</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>drunk</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>insane</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>sick</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../classes/LuaCharacter.html#LuaCharacter:apply_ailment">LuaCharacter.apply_ailment</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Element" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Element">Element</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A type of elemental damage.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>fire</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cold</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>lightning</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>darkness</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>mind</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>poison</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>nether</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>sound</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>nerve</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>chaos</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>magic</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cut</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ether</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>acid</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>vorpal</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Element">Enums.Element</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#TileKind" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="TileKind">TileKind</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A kind of tile to be used with <code>Map.generate_tile</code>.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>normal</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TileKind">Enums.TileKind</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>wall</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TileKind">Enums.TileKind</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>tunnel</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TileKind">Enums.TileKind</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>room</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TileKind">Enums.TileKind</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>fog</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TileKind">Enums.TileKind</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Map.html#generate_tile">Map.generate_tile</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Quality" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Quality">Quality</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The quality of randomly generated equipment.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>none</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>bad</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>good</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>great</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>miracle</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>godly</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>special</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Quality">Enums.Quality</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Buff" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Buff">Buff</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The type of a buff.</p>
+    <p class="section-item-description"> Food buffs are lost when vomiting. Hex buffs can be
+  removed with Holy Light/Vanquish Hex, and can be resisted.</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>buff</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Buff">Enums.Buff</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>hex</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Buff">Enums.Buff</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>food</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Buff">Enums.Buff</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#MapType" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="MapType">MapType</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The type of a map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>world_map</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>guild</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>town</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>field</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>player_owned</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>shelter</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>temporary</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dungeon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dungeon_tower</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dungeon_forest</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>dungeon_castle</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapType">Enums.MapType</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#MapEntranceType" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="MapEntranceType">MapEntranceType</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Determines how the player should be spawned in a map when entering it for the
+  first time.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>stair_up</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>stair_down</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>custom</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>center</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>random</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>world_map_pos</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>specified</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>south</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapEntranceType">Enums.MapEntranceType</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#MapTileset" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="MapTileset">MapTileset</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Indicates which map tile atlas to use for a map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>normal</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapTileset">Enums.MapTileset</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>world_map</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#MapTileset">Enums.MapTileset</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Gender" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Gender">Gender</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Possible genders of a character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>random</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Gender">Enums.Gender</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>male</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Gender">Enums.Gender</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>female</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Gender">Enums.Gender</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#Relationship" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="Relationship">Relationship</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Relationship of a character to the player.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>aggressive</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Relationship">Enums.Relationship</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>nonaggressive</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Relationship">Enums.Relationship</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>unconcerned</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Relationship">Enums.Relationship</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>neutral</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Relationship">Enums.Relationship</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>friend</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#Relationship">Enums.Relationship</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#CharaFlag" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="CharaFlag">CharaFlag</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">A flag that can be set on a character.</p>
+    <p class="section-item-description"> The first 32 flags (up to
+  <code>IsQuickTempered</code>) are "intrinsic" and will be reset
+  when the character is refreshed.</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_floating</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_invisible</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>can_see_invisible</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_confusion</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_blindness</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_fear</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_sleep</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_paralyzation</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_poison</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>can_digest_rotten_food</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_protected_from_thieves</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_incognito</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>drops_gold</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>explodes</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_death_master</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>can_cast_rapid_magic</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_lay_hand</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_suitable_for_mount</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>splits</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_cursed_equipments</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_unsuitable_for_mount</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_elemental_damage</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>splits2</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_metal</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cures_bleeding_quickly</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_power_bash</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_immune_to_mine</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_quick_tempered</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_livestock</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_married</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_made_gene</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_escorted</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_temporary</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_silent</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_been_used_stethoscope</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_own_sprite</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_leashed</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_contracting</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_quest_target</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_escorted_in_sub_quest</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>will_explode_soon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_sentenced_daeth</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_lay_hand_available</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_ridden</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_lord_of_dungeon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_own_name</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_pregnant</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_not_attacked_by_enemy</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_contracting_with_reaper</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>needs_refreshing_status</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>visited_just_now</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>breaks_into_debris</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_best_friend</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>is_hung_on_sand_bag</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_anorexia</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>was_passed_item_by_you_just_now</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>cures_mp_frequently</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_custom_talk</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>has_learned_words</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>only_christmas</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../classes/LuaCharacter.html#LuaCharacter:set_flag">LuaCharacter.set_flag</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#TraitType" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="TraitType">TraitType</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">The types of traits available.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>feat</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TraitType">Enums.TraitType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>mutation</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TraitType">Enums.TraitType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>nature</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TraitType">Enums.TraitType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ether_disease</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#TraitType">Enums.TraitType</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#CharaFindLocation" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="CharaFindLocation">CharaFindLocation</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Location to search for characters using Chara.find.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>allies</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFindLocation">Enums.CharaFindLocation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>others</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFindLocation">Enums.CharaFindLocation</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Chara.html#find">Chara.find</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#ItemFindLocation" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="ItemFindLocation">ItemFindLocation</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Location to search for items using Item.find.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>player_inventory</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ItemFindLocation">Enums.ItemFindLocation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ground</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ItemFindLocation">Enums.ItemFindLocation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>player_inventory_and_ground</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ItemFindLocation">Enums.ItemFindLocation</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Item.html#find">Item.find</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#ControlAllyOperation" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="ControlAllyOperation">ControlAllyOperation</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Operation to use with Input.choose_ally.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>call_back</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>sell</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>pet_arena</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>staying</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>investigate</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>gene_engineer</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#ControlAllyOperation">Enums.ControlAllyOperation</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Input.html#choose_ally">Input.choose_ally</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#RandomTitleType" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="RandomTitleType">RandomTitleType</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Title type to use with World.random_title.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>character</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#RandomTitleType">Enums.RandomTitleType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>weapon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#RandomTitleType">Enums.RandomTitleType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>party</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#RandomTitleType">Enums.RandomTitleType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>living_weapon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#RandomTitleType">Enums.RandomTitleType</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/World.html#random_title">World.random_title</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#WishMatchType" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="WishMatchType">WishMatchType</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Match type to use with Wish.match.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>prefix</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishMatchType">Enums.WishMatchType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>suffix</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishMatchType">Enums.WishMatchType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>include</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishMatchType">Enums.WishMatchType</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>perfect</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishMatchType">Enums.WishMatchType</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Wish.html#match">Wish.match</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#WishHook" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="WishHook">WishHook</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Wish hook point to use with Wish.add.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Enum Values:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>first</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>before_vanilla_special</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>after_vanilla_special</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>before_vanilla_item</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>after_vanilla_item</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>before_vanilla_skill</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>after_vanilla_skill</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>last</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#WishHook">Enums.WishHook</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/Wish.html#add">Wish.add</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

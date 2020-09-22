@@ -1,0 +1,1278 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LuaMapData classmod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    <ul class="uk-nav nav nav-module-contents">
+    <li class="nav-item">
+    <h4 class="uk-panel-title">Contents of <strong>LuaMapData</strong></h4>
+    <ul class="nav">
+    <li class="nav-item"><a href="#Fields"><span class="fragment-hashtag">#</span> Fields</a></li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="up-to-top">
+    <a href="#">Top <i class="icon icon-upward"></i></a>
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>LuaMapData</em></strong></span> classmod</h2>
+    <p>Contains parameters for the current map.</p>
+    <p>
+
+</p>
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Fields">Fields</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaMapData.atlas_number">LuaMapData.atlas_number</a></td>
+    <td class="summary">[RW] The map tile atlas to use for this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.next_regenerate_date">LuaMapData.next_regenerate_date</a></td>
+    <td class="summary">[RW] The date in hours when this map is next regenerated.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.turn_cost">LuaMapData.turn_cost</a></td>
+    <td class="summary">[RW] The relative time it takes to pass a single turn in this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.max_crowd_density">LuaMapData.max_crowd_density</a></td>
+    <td class="summary">[RW] The maximum crowd density of this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.current_dungeon_level">LuaMapData.current_dungeon_level</a></td>
+    <td class="summary">[R] The current dungeon level of this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.tileset">LuaMapData.tileset</a></td>
+    <td class="summary">[RW] The tileset type to use for this map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.next_restock_date">LuaMapData.next_restock_date</a></td>
+    <td class="summary">[RW] The date in hours when the map is next restocked.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.max_item_count">LuaMapData.max_item_count</a></td>
+    <td class="summary">[RW] The maximum number of items this map can hold.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.regenerate_count">LuaMapData.regenerate_count</a></td>
+    <td class="summary">[R] The number of times this map has been regenerated.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.is_genreated_every_time">LuaMapData.is_genreated_every_time</a></td>
+    <td class="summary">[RW] If true, reset characters to their initial position on map
+  refresh.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.is_indoors">LuaMapData.is_indoors</a></td>
+    <td class="summary">[RW] Indicates if this map is indoors.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.is_user_map">LuaMapData.is_user_map</a></td>
+    <td class="summary">[RW] Indicates if this map is a user map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.play_campfire_sound">LuaMapData.play_campfire_sound</a></td>
+    <td class="summary">[RW] If true, play the campfire ambience.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.should_regenerate">LuaMapData.should_regenerate</a></td>
+    <td class="summary">[RW] If true, regenerate this map when it is refreshed.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.is_temporary">LuaMapData.is_temporary</a></td>
+    <td class="summary">[RW] If true, delete this map when it is exited.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.type">LuaMapData.type</a></td>
+    <td class="summary">[RW] The type of the map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.stair_up_pos">LuaMapData.stair_up_pos</a></td>
+    <td class="summary">[R] The position of the map's up stairs.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.stair_down_pos">LuaMapData.stair_down_pos</a></td>
+    <td class="summary">[R] The position of the map's down stairs.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaMapData.bgm">LuaMapData.bgm</a></td>
+    <td class="summary">[RW] The music which will play on entering the map.</td>
+    </tr>
+    </tbody>
+    </table>
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+    <h3><span id="Fields" class="section-title"><a href="#Fields">Fields</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.atlas_number" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.atlas_number">LuaMapData.atlas_number</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The map tile atlas to use for this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>atlas_number</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.next_regenerate_date" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.next_regenerate_date">LuaMapData.next_regenerate_date</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The date in hours when this map is next regenerated.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>next_regenerate_date</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.turn_cost" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.turn_cost">LuaMapData.turn_cost</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The relative time it takes to pass a single turn in this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>turn_cost</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.max_crowd_density" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.max_crowd_density">LuaMapData.max_crowd_density</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The maximum crowd density of this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>max_crowd_density</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.current_dungeon_level" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.current_dungeon_level">LuaMapData.current_dungeon_level</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The current dungeon level of this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>current_dungeon_level</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.tileset" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.tileset">LuaMapData.tileset</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The tileset type to use for this map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>tileset</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.next_restock_date" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.next_restock_date">LuaMapData.next_restock_date</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The date in hours when the map is next restocked.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>next_restock_date</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.max_item_count" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.max_item_count">LuaMapData.max_item_count</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The maximum number of items this map can hold.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>max_item_count</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.regenerate_count" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.regenerate_count">LuaMapData.regenerate_count</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The number of times this map has been regenerated.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>regenerate_count</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.is_genreated_every_time" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.is_genreated_every_time">LuaMapData.is_genreated_every_time</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] If true, reset characters to their initial position on map
+  refresh.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_genreated_every_time</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.is_indoors" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.is_indoors">LuaMapData.is_indoors</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] Indicates if this map is indoors.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_indoors</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.is_user_map" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.is_user_map">LuaMapData.is_user_map</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] Indicates if this map is a user map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_user_map</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.play_campfire_sound" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.play_campfire_sound">LuaMapData.play_campfire_sound</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] If true, play the campfire ambience.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>play_campfire_sound</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.should_regenerate" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.should_regenerate">LuaMapData.should_regenerate</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] If true, regenerate this map when it is refreshed.</p>
+    <p class="section-item-description"> This will
+  restock shop inventories.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>should_regenerate</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.is_temporary" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.is_temporary">LuaMapData.is_temporary</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] If true, delete this map when it is exited.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>is_temporary</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.type" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.type">LuaMapData.type</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The type of the map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>type</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">MapType</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.stair_up_pos" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.stair_up_pos">LuaMapData.stair_up_pos</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The position of the map's up stairs.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>stair_up_pos</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaPosition.html#">LuaPosition</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.stair_down_pos" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.stair_down_pos">LuaMapData.stair_down_pos</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The position of the map's down stairs.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>stair_down_pos</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaPosition.html#">LuaPosition</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaMapData.bgm" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaMapData.bgm">LuaMapData.bgm</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The music which will play on entering the map.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>bgm</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">core.music</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

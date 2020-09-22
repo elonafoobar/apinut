@@ -1,0 +1,4084 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>LuaCharacter classmod</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    <ul class="uk-nav nav nav-module-contents">
+    <li class="nav-item">
+    <h4 class="uk-panel-title">Contents of <strong>LuaCharacter</strong></h4>
+    <ul class="nav">
+    <li class="nav-item"><a href="#Fields"><span class="fragment-hashtag">#</span> Fields</a></li>
+    <li class="nav-item"><a href="#Methods"><span class="fragment-hashtag">#</span> Methods</a></li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+    <div class="up-to-top">
+    <a href="#">Top <i class="icon icon-upward"></i></a>
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>LuaCharacter</em></strong></span> classmod</h2>
+    <p>Represents a character.</p>
+    <p>
+
+</p>
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Fields">Fields</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.index">LuaCharacter.index</a></td>
+    <td class="summary">[R] The index of this character in the global characters array.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.integer_id">LuaCharacter.integer_id</a></td>
+    <td class="summary">[R] The integer ID of this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.hp">LuaCharacter.hp</a></td>
+    <td class="summary">[R] The character's proper name without any qualifiers.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.max_hp">LuaCharacter.max_hp</a></td>
+    <td class="summary">[R] The character's maximum HP.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.sp">LuaCharacter.sp</a></td>
+    <td class="summary">[R] The character's current stamina.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.max_sp">LuaCharacter.max_sp</a></td>
+    <td class="summary">[R] The character's maximum stamina.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.mp">LuaCharacter.mp</a></td>
+    <td class="summary">[R] The character's current MP.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.max_mp">LuaCharacter.max_mp</a></td>
+    <td class="summary">[R] The character's maximum MP.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.god">LuaCharacter.god</a></td>
+    <td class="summary">[RW] The character's worshipped god.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.position">LuaCharacter.position</a></td>
+    <td class="summary">[RW] The character's position.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.initial_position">LuaCharacter.initial_position</a></td>
+    <td class="summary">[RW] The character's initial position.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.shop_rank">LuaCharacter.shop_rank</a></td>
+    <td class="summary">[RW] The shop rank of this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.role">LuaCharacter.role</a></td>
+    <td class="summary">[RW] The role this character takes on.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.gold">LuaCharacter.gold</a></td>
+    <td class="summary">[RW] The character's current gold.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.experience">LuaCharacter.experience</a></td>
+    <td class="summary">[RW] The character's current experience points.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.fame">LuaCharacter.fame</a></td>
+    <td class="summary">[RW] The character's current fame.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.level">LuaCharacter.level</a></td>
+    <td class="summary">[RW] The character's current level.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.talk_type">LuaCharacter.talk_type</a></td>
+    <td class="summary">[RW] The character's current talk type.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.pv">LuaCharacter.pv</a></td>
+    <td class="summary">[RW] The character's current PV.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.dv">LuaCharacter.dv</a></td>
+    <td class="summary">[RW] The character's current DV.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.hit_bonus">LuaCharacter.hit_bonus</a></td>
+    <td class="summary">[RW] The character's current hit bonus.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.growth_buffs">LuaCharacter.growth_buffs</a></td>
+    <td class="summary">[RW] The character's current growth buffs.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.hate">LuaCharacter.hate</a></td>
+    <td class="summary">[RW] The character's current hate.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.emotion_icon">LuaCharacter.emotion_icon</a></td>
+    <td class="summary">[RW] The character's current emotion icon.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.karma">LuaCharacter.karma</a></td>
+    <td class="summary">[RW] The character's current karma.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.enemy_id">LuaCharacter.enemy_id</a></td>
+    <td class="summary">[RW] The index of a character this character is targeting..</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.image">LuaCharacter.image</a></td>
+    <td class="summary">[RW] The character's current image.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.portrait">LuaCharacter.portrait</a></td>
+    <td class="summary">[RW] The character's current portrait.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.impression">LuaCharacter.impression</a></td>
+    <td class="summary">[RW] The character's current impression.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.interest">LuaCharacter.interest</a></td>
+    <td class="summary">[RW] The character's current interest.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.ai_calm">LuaCharacter.ai_calm</a></td>
+    <td class="summary">[RW] The character's AI calmness.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.id">LuaCharacter.id</a></td>
+    <td class="summary">[R] The new-style version prototype ID of the character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.name">LuaCharacter.name</a></td>
+    <td class="summary">[R] The name of the character with article and title.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.basename">LuaCharacter.basename</a></td>
+    <td class="summary">[R] The name of the character without article and title.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.alias">LuaCharacter.alias</a></td>
+    <td class="summary">[R] The alias of the character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.sex">LuaCharacter.sex</a></td>
+    <td class="summary">[RW] The sex of the character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.relationship">LuaCharacter.relationship</a></td>
+    <td class="summary">[RW] The relationship of the character to the player.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.original_relationship">LuaCharacter.original_relationship</a></td>
+    <td class="summary">[RW] The original relationship of the character to the player.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.quality">LuaCharacter.quality</a></td>
+    <td class="summary">[RW] The quality of the character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter.prototype">LuaCharacter.prototype</a></td>
+    <td class="summary">[R] The prototype data of the character.</td>
+    </tr>
+    </tbody>
+    </table>
+    <table class="section-content-list">
+    <thead>
+    <h3><a href="#Methods">Methods</a></h3>
+    <span></span>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:damage_hp">LuaCharacter:damage_hp (amount[, source])</a></td>
+    <td class="summary">Damages this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:damage_hp">LuaCharacter:damage_hp (amount, source)</a></td>
+    <td class="summary">Damages this character, with the source being set as another character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:apply_ailment">LuaCharacter:apply_ailment (ailment, power)</a></td>
+    <td class="summary">Applies a status ailment to this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:heal_ailment">LuaCharacter:heal_ailment (ailment, power)</a></td>
+    <td class="summary">Heals a status ailment on a character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:add_buff">LuaCharacter:add_buff (buff_id, power, turns[, doer])</a></td>
+    <td class="summary">Adds a buff to a character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:set_growth_buff">LuaCharacter:set_growth_buff (index, power)</a></td>
+    <td class="summary">Sets a growth buff of this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:recruit_as_ally">LuaCharacter:recruit_as_ally ()</a></td>
+    <td class="summary">Attempts to recruit this character as an ally of the player.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:get_flag">LuaCharacter:get_flag (flag)</a></td>
+    <td class="summary">Gets the value of a flag on this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:set_flag">LuaCharacter:set_flag (flag, value)</a></td>
+    <td class="summary">Sets the value of a flag on this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:get_skill">LuaCharacter:get_skill (skill_id)</a></td>
+    <td class="summary">Obtains the skill of the given ID.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:gain_skill">LuaCharacter:gain_skill (skill_id, initial_level[, initial_stock])</a></td>
+    <td class="summary">Makes this character gain a new skill or spell.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:gain_skill_exp">LuaCharacter:gain_skill_exp (skill_id, amount)</a></td>
+    <td class="summary">Makes this character gain experience in a skill or spell.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:modify_resistance">LuaCharacter:modify_resistance (element, delta)</a></td>
+    <td class="summary">Modifies this character's resistance.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:modify_sanity">LuaCharacter:modify_sanity (delta)</a></td>
+    <td class="summary">Modifies this character's sanity.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:modify_karma">LuaCharacter:modify_karma (delta)</a></td>
+    <td class="summary">Modifies this character's karma.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:modify_corruption">LuaCharacter:modify_corruption (delta)</a></td>
+    <td class="summary">Modifies this character's ether corruption.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:make_pregnant">LuaCharacter:make_pregnant ()</a></td>
+    <td class="summary">Makes this character pregnant.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:eat_rotten_food">LuaCharacter:eat_rotten_food ()</a></td>
+    <td class="summary">Applies the effects of eating rotten food to this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:vanquish">LuaCharacter:vanquish ()</a></td>
+    <td class="summary">Deletes this character and removes it from the map.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:act_hostile_against">LuaCharacter:act_hostile_against (target)</a></td>
+    <td class="summary">Applies the effects of acting hostile towards a target character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:refresh">LuaCharacter:refresh ()</a></td>
+    <td class="summary">Refreshes this character, reapplying bonuses given by equipment.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:refresh_burden_state">LuaCharacter:refresh_burden_state ()</a></td>
+    <td class="summary">Refreshes the burden state of this character.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:move_to">LuaCharacter:move_to (x, y)</a></td>
+    <td class="summary">Moves this character to a new position.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:move_to">LuaCharacter:move_to (pos)</a></td>
+    <td class="summary">Moves this character to a new position.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:switch_religion">LuaCharacter:switch_religion (god_id)</a></td>
+    <td class="summary">Changes the worshipped god of this character without invoking the god
+  switching penalty.</td>
+    </tr>
+    <tr>
+    <td class="name"><a href="#LuaCharacter:get_ailment">LuaCharacter:get_ailment (ailment)</a></td>
+    <td class="summary">Returns the duration of an ailment on this character.</td>
+    </tr>
+    </tbody>
+    </table>
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+    <h3><span id="Fields" class="section-title"><a href="#Fields">Fields</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.index" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.index">LuaCharacter.index</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The index of this character in the global characters array.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>index</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.integer_id" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.integer_id">LuaCharacter.integer_id</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The integer ID of this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>integer_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.hp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.hp">LuaCharacter.hp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's proper name without any qualifiers.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>hp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.max_hp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.max_hp">LuaCharacter.max_hp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's maximum HP.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>max_hp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.sp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.sp">LuaCharacter.sp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's current stamina.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>sp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.max_sp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.max_sp">LuaCharacter.max_sp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's maximum stamina.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>max_sp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.mp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.mp">LuaCharacter.mp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's current MP.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>mp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.max_mp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.max_mp">LuaCharacter.max_mp</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The character's maximum MP.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>max_mp</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.god" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.god">LuaCharacter.god</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's worshipped god.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>god</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.position" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.position">LuaCharacter.position</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's position.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>position</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaPosition.html#">LuaPosition</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.initial_position" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.initial_position">LuaCharacter.initial_position</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's initial position.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>initial_position</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaPosition.html#">LuaPosition</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.shop_rank" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.shop_rank">LuaCharacter.shop_rank</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The shop rank of this character.</p>
+    <p class="section-item-description"> Used only if they are a
+  shopkeeper.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>shop_rank</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.role" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.role">LuaCharacter.role</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The role this character takes on.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>role</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.gold" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.gold">LuaCharacter.gold</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current gold.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>gold</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.experience" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.experience">LuaCharacter.experience</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current experience points.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>experience</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.fame" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.fame">LuaCharacter.fame</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current fame.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>fame</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.level" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.level">LuaCharacter.level</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current level.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>level</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.talk_type" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.talk_type">LuaCharacter.talk_type</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current talk type.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>talk_type</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.pv" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.pv">LuaCharacter.pv</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current PV.</p>
+    <p class="section-item-description"> Reset on refresh.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>pv</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.dv" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.dv">LuaCharacter.dv</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current DV.</p>
+    <p class="section-item-description"> Reset on refresh.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>dv</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.hit_bonus" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.hit_bonus">LuaCharacter.hit_bonus</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current hit bonus.</p>
+    <p class="section-item-description"> Reset on refresh.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>hit_bonus</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.growth_buffs" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.growth_buffs">LuaCharacter.growth_buffs</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current growth buffs.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>growth_buffs</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.hate" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.hate">LuaCharacter.hate</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current hate.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>hate</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.emotion_icon" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.emotion_icon">LuaCharacter.emotion_icon</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current emotion icon.</p>
+    <p class="section-item-description"> Valid values are 0-99.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>emotion_icon</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.karma" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.karma">LuaCharacter.karma</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current karma.</p>
+    <p class="section-item-description"> Only valid if the character is
+  the player.</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>karma</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.enemy_id" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.enemy_id">LuaCharacter.enemy_id</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The index of a character this character is targeting..</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>enemy_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.image" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.image">LuaCharacter.image</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current image.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>image</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.portrait" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.portrait">LuaCharacter.portrait</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current portrait.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>portrait</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.impression" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.impression">LuaCharacter.impression</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current impression.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>impression</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.interest" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.interest">LuaCharacter.interest</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's current interest.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>interest</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.ai_calm" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.ai_calm">LuaCharacter.ai_calm</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The character's AI calmness.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>ai_calm</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.id" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.id">LuaCharacter.id</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The new-style version prototype ID of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.name" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.name">LuaCharacter.name</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The name of the character with article and title.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>name</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.basename" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.basename">LuaCharacter.basename</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The name of the character without article and title.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>basename</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.alias" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.alias">LuaCharacter.alias</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The alias of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>alias</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.sex" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.sex">LuaCharacter.sex</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The sex of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>sex</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">Gender</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.relationship" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.relationship">LuaCharacter.relationship</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The relationship of the character to the player.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>relationship</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">Relationship</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.original_relationship" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.original_relationship">LuaCharacter.original_relationship</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The original relationship of the character to the player.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>original_relationship</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">Relationship</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.quality" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.quality">LuaCharacter.quality</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[RW] The quality of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>quality</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">Quality</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter.prototype" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter.prototype">LuaCharacter.prototype</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">[R] The prototype data of the character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-module-field-li">
+
+    <strong><em>prototype</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="https://www.lua.org/pil/2.5.html">table</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+    <h3><span id="Methods" class="section-title"><a href="#Methods">Methods</a></span></h3>
+    <dl class="section-body-container">
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:damage_hp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:damage_hp">LuaCharacter:damage_hp (amount[, source])</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Damages this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>amount</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount to damage
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>source</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#DamageSource">Enums.DamageSource</a></span>)
+
+     the source of the damage (defaults to
+  the unseen hand)
+
+    (<em>optional</em>)
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> chara = Chara.player()
+  chara:damage_hp(<span class="number">100</span>)</code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:damage_hp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:damage_hp">LuaCharacter:damage_hp (amount, source)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Damages this character, with the source being set as another character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>amount</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount to damage
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>source</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaCharacter.html#">LuaCharacter</a></span>)
+
+     the character acting as the source of the damage
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> chara = Chara.player()
+ <span class="keyword">local</span> other = Chara.create(<span class="number">0</span>, <span class="number">0</span>, <span class="string">"core.putit"</span>)
+ chara:damage_hp(<span class="number">100</span>, other)</code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:apply_ailment" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:apply_ailment">LuaCharacter:apply_ailment (ailment, power)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Applies a status ailment to this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ailment</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+     the kind of status ailment
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>power</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the power of the status ailment
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> chara = Chara.player()
+  chara:apply_ailment(<span class="string">"Blinded"</span>, <span class="number">100</span>)</code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:heal_ailment" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:heal_ailment">LuaCharacter:heal_ailment (ailment, power)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Heals a status ailment on a character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ailment</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#StatusAilment">Enums.StatusAilment</a></span>)
+
+     the kind of status ailment
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>power</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the power of the healing. If 0, heal the ailment
+  completely.
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> chara = Chara.player()
+  chara:heal_ailment(<span class="string">"Blinded"</span>, <span class="number">100</span>)</code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:add_buff" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:add_buff">LuaCharacter:add_buff (buff_id, power, turns[, doer])</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Adds a buff to a character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>buff_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     the buff to add
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>power</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the buff's power
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>turns</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the number of turns the buff will last
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>doer</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaCharacter.html#">LuaCharacter</a></span>)
+
+     the character who applied this buff
+
+    (<em>optional</em>)
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:set_growth_buff" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:set_growth_buff">LuaCharacter:set_growth_buff (index, power)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets a growth buff of this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>index</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>power</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:recruit_as_ally" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:recruit_as_ally">LuaCharacter:recruit_as_ally ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Attempts to recruit this character as an ally of the player.</p>
+    <p class="section-item-description">  This will only work if the character isn't already an ally, isn't
+  the player, is alive and the player has a free party slot.</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">bool</span></span>)
+    <span class="return-text">true if the character was recruited successfully</span>
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:get_flag" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:get_flag">LuaCharacter:get_flag (flag)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Gets the value of a flag on this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>flag</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+     the flag to get
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">bool</span></span>)
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:set_flag" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:set_flag">LuaCharacter:set_flag (flag, value)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Sets the value of a flag on this character.</p>
+    <p class="section-item-description"> <b>Note</b>: Currently, all
+  flags up to <code>is<em>quick</em>tempered</code> are "intrinsic" and are always
+  reset when this character is refreshed each turn. To change these flags, you
+  must call this function inside a handler for
+  <code>core.character_refreshed</code>, or the flag will be reset later.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>flag</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../modules/Enums.html#CharaFlag">Enums.CharaFlag</a></span>)
+
+     the flag to set
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>value</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">bool</span></span>)
+
+     the flag's new value
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <strong>See also:</strong>
+    <ul>
+    <li><a href="../modules/core.event.html#">core.event</a></li>
+    </ul>
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <strong>Usage:</strong>
+    <pre class="code" data-lang="Lua"><code><span class="keyword">local</span> Event = ELONA.<span class="global">require</span>(<span class="string">"core.Event"</span>)
+
+ <span class="keyword">local</span> <span class="keyword">function</span> make_invisible(e)
+ e.chara:set_flag(<span class="string">"is_invisible"</span>, <span class="keyword">true</span>) <span class="comment">-- intrinsic, reset on refresh
+</span> <span class="keyword">end</span>
+
+ <span class="comment">-- force this flag to be overridden after this character is refreshed.
+</span> Event.register(<span class="string">"core.character_refreshed"</span>, make_invisible)
+ Event.register(<span class="string">"core.character_created"</span>, make_invisible)</code></pre>
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:get_skill" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:get_skill">LuaCharacter:get_skill (skill_id)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Obtains the skill of the given ID.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>skill_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     ID of type core.ability
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><a class="type" href="../classes/LuaAbility.html#">LuaAbility</a></span>)
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:gain_skill" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:gain_skill">LuaCharacter:gain_skill (skill_id, initial_level[, initial_stock])</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Makes this character gain a new skill or spell.</p>
+    <p class="section-item-description"> This only has an
+  effect if the character does not already know the skill/spell.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>skill_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     the skill/spell ID of type core.ability
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>initial_level</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the intial skill/spell level
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>initial_stock</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the initial spell stock for spells
+
+    (<em>optional</em>)
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:gain_skill_exp" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:gain_skill_exp">LuaCharacter:gain_skill_exp (skill_id, amount)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Makes this character gain experience in a skill or spell.</p>
+    <p class="section-item-description"> This only
+  has an effect if the character already knows the skill/spell.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>skill_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     the skill/spell ID of type core.ability
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>amount</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount of experience
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:modify_resistance" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:modify_resistance">LuaCharacter:modify_resistance (element, delta)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Modifies this character's resistance.</p>
+    <p class="section-item-description"> Since the effect is
+  permanent, once your resistance is modified, it will not be reset
+  on refreshing.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>element</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the corresponding element
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>delta</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount of increase/decrease (can be negative)
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:modify_sanity" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:modify_sanity">LuaCharacter:modify_sanity (delta)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Modifies this character's sanity.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>delta</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount of increase/decrease (can be negative)
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:modify_karma" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:modify_karma">LuaCharacter:modify_karma (delta)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Modifies this character's karma.</p>
+    <p class="section-item-description"> Currently only has an effect if
+  the character is the player.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>delta</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount of increase/decrease (can be negative)
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:modify_corruption" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:modify_corruption">LuaCharacter:modify_corruption (delta)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Modifies this character's ether corruption.</p>
+    <p class="section-item-description"> Currently only has an
+  effect if the character is the player.</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>delta</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+     the amount of increase/decrease (can be negative)
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:make_pregnant" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:make_pregnant">LuaCharacter:make_pregnant ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Makes this character pregnant.</p>
+    <p class="section-item-description"> Only has an effect if the character
+  is not already pregnant.</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:eat_rotten_food" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:eat_rotten_food">LuaCharacter:eat_rotten_food ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Applies the effects of eating rotten food to this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:vanquish" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:vanquish">LuaCharacter:vanquish ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Deletes this character and removes it from the map.</p>
+    <p class="section-item-description"> The character will no
+  longer be valid for use.</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:act_hostile_against" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:act_hostile_against">LuaCharacter:act_hostile_against (target)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Applies the effects of acting hostile towards a target character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>target</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaCharacter.html#">LuaCharacter</a></span>)
+
+     Target to act hostile towards
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:refresh" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:refresh">LuaCharacter:refresh ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Refreshes this character, reapplying bonuses given by equipment.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:refresh_burden_state" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:refresh_burden_state">LuaCharacter:refresh_burden_state ()</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Refreshes the burden state of this character.</p>
+    <p class="section-item-description"> Only valid if called on the
+  player. Call this method if the character's inventory changes so the weight
+  can be reapplied.</p>
+
+    <!-- parameters start -->
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:move_to" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:move_to">LuaCharacter:move_to (x, y)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Moves this character to a new position.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>x</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>y</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">num</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:move_to" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:move_to">LuaCharacter:move_to (pos)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Moves this character to a new position.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>pos</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><a class="type" href="../classes/LuaPosition.html#">LuaPosition</a></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:switch_religion" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:switch_religion">LuaCharacter:switch_religion (god_id)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Changes the worshipped god of this character without invoking the god
+  switching penalty.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>god_id</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">string</span></span>)
+
+     ID of type core.god.
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    <dt>
+    <div class="divider divider-custom"></div>
+    <div class="block section-item-header">
+    <a href="#LuaCharacter:get_ailment" class="fragment-hashtag">#</a>
+    <span class="section-item-title" id="LuaCharacter:get_ailment">LuaCharacter:get_ailment (ailment)</span>
+    </div>
+    </dt>
+    <dd>
+    <div class="section-item-body">
+
+    <p class="section-item-summary">Returns the duration of an ailment on this character.</p>
+    <p class="section-item-description">
+
+</p>
+
+    <!-- parameters start -->
+    <strong>Parameters:</strong>
+
+    <ul>
+
+
+
+
+
+    <li class="section-subitem-li">
+
+    <strong><em>ailment</em></strong>
+
+    <strong> : </strong>
+
+    (<span class="types"><span class="type">StatusAilment</span></span>)
+
+
+
+
+
+    </li>
+
+
+    </ul>
+
+    <!-- parameters end -->
+
+    <!-- returns start -->
+    <strong>Returns:</strong>
+    <ul>
+    <li>
+    (<span class="types"><span class="type">num</span></span>)
+    </li>
+    </ul>
+    <!-- returns end -->
+
+
+    <!-- see also start -->
+    <!-- see also end -->
+
+    <!-- usage start -->
+    <!-- usage end -->
+
+    </dd>
+    </dl>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>

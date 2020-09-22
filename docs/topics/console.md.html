@@ -1,0 +1,464 @@
+
+
+    <!doctype html>
+    <html class="no-js" lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>console.md topic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../uikit.min.css" type="text/css" />
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    </head>
+    <body>
+
+    <div class="uk-container uk-container-center">
+    <div class="uk-grid uk-margin-top">
+
+    <img src="../atcat.png" alt="Lua API" class="icon">
+
+    <!-- sidebar start -->
+    <aside class="uk-width-medium-1-5 uk-row-first">
+    <div id="sidebar" class="uk-panel">
+
+    <div class="sidebar-custom">
+
+    <div class="project-infobox">
+
+    <!-- project title -->
+
+    <a href="../index.html"><h1 style="padding-top: 8px">Lua API</h1></a>
+
+    <!-- project description -->
+    <p class="project-desc">Elona foobar Mod API</p>
+
+    <!-- project full description -->
+    <span>  Core API for modding Elona foobar</span>
+    </div>
+
+
+    <!-- sidebar navigation -->
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Topics</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/README.md.html"><span class="module-name-item">README.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/config.md.html"><span class="module-name-item">config.md</span></a></div></li>
+    <li class="nav-item active"><div class="nav-item-block-active block"><a href="../topics/console.md.html"><span class="module-name-item">console.md</span></a><i class="icon icon-arrow-left icon-arrow-left-custom"></i></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n.md.html"><span class="module-name-item">i18n.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_format_syntax.md.html"><span class="module-name-item">i18n_format_syntax.md</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../topics/i18n_functions.md.html"><span class="module-name-item">i18n_functions.md</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Modules</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Animation.html"><span class="module-name-item">Animation</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Calc.html"><span class="module-name-item">Calc</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Chara.html"><span class="module-name-item">Chara</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Config.html"><span class="module-name-item">Config</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Console.html"><span class="module-name-item">Console</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Data.html"><span class="module-name-item">Data</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Debug.html"><span class="module-name-item">Debug</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enchantment.html"><span class="module-name-item">Enchantment</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Env.html"><span class="module-name-item">Env</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/FOV.html"><span class="module-name-item">FOV</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/GUI.html"><span class="module-name-item">GUI</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/I18N.html"><span class="module-name-item">I18N</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Input.html"><span class="module-name-item">Input</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Inventory.html"><span class="module-name-item">Inventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Item.html"><span class="module-name-item">Item</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/JSON5.html"><span class="module-name-item">JSON5</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Magic.html"><span class="module-name-item">Magic</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Map.html"><span class="module-name-item">Map</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Pos.html"><span class="module-name-item">Pos</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Rand.html"><span class="module-name-item">Rand</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Skill.html"><span class="module-name-item">Skill</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Trait.html"><span class="module-name-item">Trait</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Wish.html"><span class="module-name-item">Wish</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/World.html"><span class="module-name-item">World</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/core.event.html"><span class="module-name-item">core.event</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Enums.html"><span class="module-name-item">Enums</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../modules/Event.html"><span class="module-name-item">Event</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Classes</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaAbility.html"><span class="module-name-item">LuaAbility</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaArea.html"><span class="module-name-item">LuaArea</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaCharacter.html"><span class="module-name-item">LuaCharacter</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaDateTime.html"><span class="module-name-item">LuaDateTime</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaGameData.html"><span class="module-name-item">LuaGameData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaInventory.html"><span class="module-name-item">LuaInventory</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaItem.html"><span class="module-name-item">LuaItem</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapData.html"><span class="module-name-item">LuaMapData</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaMapGenerator.html"><span class="module-name-item">LuaMapGenerator</span></a></div></li>
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../classes/LuaPosition.html"><span class="module-name-item">LuaPosition</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="uk-nav">
+    <li class="nav-item">
+    <h2 class="uk-panel-title">Examples</h2>
+    <ul class="nav">
+    <li class="nav-item"><div class="nav-item-block-inactive block"><a href="../examples/life.lua.html"><span class="module-name-item">life.lua</span></a></div></li>
+    </ul>
+    </li>
+    </ul>
+
+
+
+    <!-- list of items in a module -->
+    </div>
+    </div>
+    </aside>
+    <!-- sidebar end -->
+
+    <!-- content body start -->
+    <div class="uk-width-medium-4-5 uk-push-1">
+
+    <!-- module list on the main page start -->
+    <!-- module list on the main page end -->
+
+    <!-- module contents -->
+
+    <!-- module content header start -->
+
+    <h2><span class="body-module-name"><strong><em>console.md</em></strong></span> topic</h2>
+    <p></p>
+    <p></p>
+
+
+
+
+<h1>In-game console</h1>
+
+
+
+<p>Elona foobar has in-game console re-implemented by using Lua.</p>
+
+
+
+
+<p><a name="Quickstart"></a></p>
+
+
+<h2>Quickstart</h2>
+
+
+
+<p>Open the console by pressing <code>Shift+F12</code> (this keybinding can be configured).</p>
+
+
+
+<p>Then, type your first console command. Following the tradition, the first one is "Hello, world!"</p>
+
+
+
+<pre><code> &gt;&gt;&gt; :echo "Hello, World!"
+ Hello, World!
+</code></pre>
+
+
+<p>To show all of the available commands, type <code>:?</code> or <code>:help</code>.</p>
+
+
+
+
+
+<p><a name="Modes"></a></p>
+
+
+<h2>Modes</h2>
+
+
+
+<p>The console has two kinds of mode, shell mode and Lua mode. The command line starting with <code>:</code> is executed in shell mode. Any other inputs are processed in Lua mode. In Lua mode, your input code is executed in an isolated environment from the game. Any variables or functions you defined in the environment will not affect the game, including mods.</p>
+
+
+
+
+<p><a name="Command_namespace"></a></p>
+
+
+<h2>Command namespace</h2>
+
+
+
+<p>All console commands have own "namespace", usually the mod name where the command is defined. There are two pre-defined namespaces, <code>_bulitin_</code> and <code>_console_</code>. <code>_bulitin_</code> is a namespace for built-in commands defined in C++ or kernel Lua module. <code>_console_</code> is one for user-defined commands which are defined via the console. Registered commands are stored in <code>COMMANDS</code> table. You can access any commands in Lua mode like this:</p>
+
+
+
+<pre><code> &gt;&gt;&gt; COMMANDS[namespace][command_name]()
+</code></pre>
+
+
+
+<p><a name="Commands"></a></p>
+
+
+<h2>Commands</h2>
+
+
+
+<h3><code>:?</code></h3>
+
+
+
+<p>Alias for <code>:help</code>.</p>
+
+
+
+
+<h3><code>:help</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :help
+</code></pre>
+
+
+<p>Show all commands.</p>
+
+
+
+
+<h3><code>:echo</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :echo foo
+</code></pre>
+
+
+<p>Print the argument to the console.</p>
+
+
+
+
+<h3><code>:history</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :history
+</code></pre>
+
+
+<p>Print most recently executed command lines up to 10.</p>
+
+
+
+
+<h3><code>:ls</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :ls
+</code></pre>
+
+
+<p>Show all enabled mods with their versions.</p>
+
+
+
+
+<h3><code>:wizard</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :wizard
+</code></pre>
+
+
+<p>Activate wizard mode.</p>
+
+
+
+
+<h3><code>:voldemort</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :voldemort
+</code></pre>
+
+
+<p>Activate Voldemort mode.</p>
+
+
+
+
+<h3><code>:muggle</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :muggle
+</code></pre>
+
+
+<p>Inactivate wizard mode.</p>
+
+
+
+
+<h3><code>:wish</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :wish [WISH] [NUM]
+</code></pre>
+
+
+<p>Wish <code>WISH</code> <code>NUM</code> times.</p>
+
+
+
+
+<h3><code>:gain_spell</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :gain_spell
+</code></pre>
+
+
+<p>Learn all spells with much spellstocks.</p>
+
+
+
+
+<h3><code>:gain_spact</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :gain_spact
+</code></pre>
+
+
+<p>Learn all spacts (special actions).</p>
+
+
+
+
+<h3><code>:gain_exp</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :gain_exp [EXP]
+</code></pre>
+
+
+<p>Gain <code>EXP</code> experience (1 billion by default).</p>
+
+
+
+
+<h3><code>:gain_fame</code></h3>
+
+
+
+<pre><code> &gt;&gt;&gt; :gain_fame [FAME]
+</code></pre>
+
+
+<p>Gain <code>FAME</code> fame (1 million by default).</p>
+
+
+
+
+
+<p><a name="Variables"></a></p>
+
+
+<h2>Variables</h2>
+
+
+
+<p>There are some variables available in Lua mode.</p>
+
+
+
+
+<h3><code>COMMANDS</code></h3>
+
+
+
+<p>The variable holds all console commands.</p>
+
+
+
+<pre><code> &gt;&gt;&gt; COMMANDS._builtin_.echo("Hello, World!")
+</code></pre>
+
+
+
+<h3><code>PROMPT</code> / <code>PROMPT2</code></h3>
+
+<p>They are the prompt text shown in the console. <code>PROMPT2</code> is shown when your input Lua snippet is incomplete.</p>
+
+
+
+<pre><code> &gt;&gt;&gt; PROMPT = "$ "
+ $ PROMPT2 = "$    "
+ $ if x &lt; 10 then
+ $    print("foo")
+ $    end
+</code></pre>
+
+
+
+<h3><code>RESULT</code></h3>
+
+<p>It is the result of the command most recently executed.</p>
+
+
+
+<pre><code> &gt;&gt;&gt; Chara.player()
+ &gt;&gt;&gt; p(RESULT.position)
+</code></pre>
+
+
+
+
+
+    <!-- module info start -->
+    <!-- module info end -->
+
+    <!-- module usage start -->
+    <!-- module usage end -->
+
+    <!-- module content header end -->
+
+    <!-- module section list start -->
+    <!-- module section list end -->
+
+    <br />
+
+    <!-- section start -->
+
+    </div>
+
+    <!-- section end -->
+
+    </div>
+    </div>
+    </div>
+
+    <div class="uk-container uk-container-center uk-hidden-small">
+    <hr/>
+    <div class="footer-columns columns">
+    <div class="sidebar-footer column col-3 col-sm-12">
+    <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+    </div>
+    <div class="content-footer column col-9 col-sm-12">
+    <i>Last updated 2020-09-22 UTC</i>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
